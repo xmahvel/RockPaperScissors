@@ -6,7 +6,8 @@ def ifState():
     computerChoice = random.choice(computerGen)
 
     userInput = input("Please select your weapon of choice \n")
-
+    
+    # if/elif conditional statement used here
     if userInput == "Rock":
         print('You have selected Rock and computer chose ' + computerChoice)
         if computerChoice == "Paper":
@@ -32,8 +33,9 @@ def ifState():
         elif computerChoice == "Scissors":
             print("TIE")
     
+# this True boolean allows for the program to continously run 
 while True:
     ifState()
-# print("Random generated is: ", random.choice(computerChoice))
+
 
 
