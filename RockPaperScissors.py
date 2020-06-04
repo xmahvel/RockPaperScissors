@@ -1,7 +1,13 @@
 import random
 
+userTally = 0
+aiTally = 0
+
 def ifState():
     computerGen = ['Rock', 'Paper', 'Scissors']
+
+    global userTally
+    global aiTally
 
     computerChoice = random.choice(computerGen)
 
@@ -11,31 +17,34 @@ def ifState():
     if userInput == "Rock":
         print('You have selected Rock and computer chose ' + computerChoice)
         if computerChoice == "Paper":
-            print("YOU LOSE")
+            aiTally += 1
+            print("YOU LOSE! AI Score is " + str(aiTally))
         elif computerChoice == "Scissors":
-            print("YOU WIN")
+            userTally += 1
+            print("YOU WIN! User Score is " + str(userTally))
         elif computerChoice == "Rock":
             print("TIE")
     elif userInput == "Paper":
         print('You have selected Paper and computer chose ' + computerChoice)
         if computerChoice == "Scissors":
-            print("YOU LOSE")
+            aiTally += 1
+            print("YOU LOSE! AI Score is " + str(aiTally))
         elif computerChoice == "Rock":
-            print("YOU WIN")
+            userTally += 1
+            print("YOU WIN! User Score is " + str(userTally))
         elif computerChoice == "Paper":
             print("TIE")
     elif userInput == "Scissors":
         print('You have selected Scissors and computer chose ' + computerChoice)
         if computerChoice == "Rock":
-            print("YOU LOSE")
+            aiTally += 1
+            print("YOU LOSE! AI Score is " + str(aiTally))
         elif computerChoice == "Paper":
-            print("YOU WIN")
+            userTally += 1
+            print("YOU WIN! User Score is " + str(userTally))
         elif computerChoice == "Scissors":
-            print("TIE")
-    
+            print("TIE") 
+
 # this True boolean allows for the program to continously run 
 while True:
     ifState()
-
-
-
